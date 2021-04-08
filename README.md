@@ -72,7 +72,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 52.149.230.168       |
+| Jump Box | No                  | 52.149.230.168       |
 | Web-1    | No                  | 10.1.0.6             |
 | Web-2    | No                  | 10.1.0.7             |
 | ELK      | No                  | 10.0.0.4             |
