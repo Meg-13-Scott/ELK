@@ -112,7 +112,7 @@ SSH into the control node and follow the steps below:
 
 To run the Ansible configuration for ELK: 
  - ssh azdmin@52.149.230.168 
- - runthe commands:
+ - run the commands:
  - sudo docker containter list -a (locate name of container) [thirsty_wozniak]
  - sudo docker start thirsty_wozniak
  - sudo docker attach thirsty_wozniak
