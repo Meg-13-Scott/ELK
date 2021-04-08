@@ -22,10 +22,10 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
-- What aspect of security do load balancers protect? 
+- What aspect of security do load balancers protect?_
 	Load balancers protect the availability aspect of security.
 
-- What is the advantage of a jump box?
+- What is the advantage of a jump box?_
 	The advantage of a jump box is being able to access and manage different machines by allowing connections from specific IP addresses.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
