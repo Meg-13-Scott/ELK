@@ -25,7 +25,7 @@ Load balancing ensures that the application will be highly available, in additio
 - What aspect of security do load balancers protect? 
 	Load balancers protect the availability aspect of security.
 
-- What is the advantage of a jump box?_
+- What is the advantage of a jump box?
 	The advantage of a jump box is being able to access and manage different machines by allowing connections from specific IP addresses.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
