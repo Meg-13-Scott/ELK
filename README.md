@@ -3,10 +3,6 @@ Elk server project
 
 ## Automated ELK Stack Deployment
 
-The files in this repository were used to configure the network depicted below.
-
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
-
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
   - The ansible playbooks & filebeat-playbook-webservers.yml & elk-docker.yml are needed to create and deploy the Elk server.
@@ -86,17 +82,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _You can write one playbook and configure multiple machines using a single command. 
 
 The playbook implements the following tasks:
-- Install docker: docker.io
-- Pull the container
-- Start docker
-- Attach docker
+- Using the machines stated in host file
+- installs docker.io & python3-pip docker
+- increase memory
+- download ELK over certain ports
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-**Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
-
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -119,7 +109,13 @@ SSH into the control node and follow the steps below:
 - Update the configuration file to include the private IP of the Elk server 
 - Run the playbook,and navigate to the Elk server public IP address (http://52.158.244.29:5601/app/kibana) to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+To run the Ansible configuration for ELK: 
+ - ssh azdmin@52.149.230.168 
+ - runthe commands:
+ - sudo docker containter list -a (locate name of container) [thirsty_wozniak]
+ - sudo docker start thirsty_wozniak
+ - sudo docker attach thirsty_wozniak
+ - sudo docker ps (check status)
+ - cd /etc/ansible (elk-docker.yml) 
+ - cd /etc/ansible/roles (filebeat-playbook.yml)
+ - web page: http://52.158.244.29:5601/app/kibana to reach kibana portal
